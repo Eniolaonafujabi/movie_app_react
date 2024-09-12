@@ -1,7 +1,7 @@
 import React from 'react'
 import { useGetAllNowPlayingMoviesQuery } from '../service/Api';
 import style from './NowPlayingMovies.module.css'
-
+ const img = process.env.REACT_APP_MOVIE_IMAGES
 const NowPlayingMovie = () => {
     // console.log(useGetAllNowPlayingMoviesQuery)
     const {data, isLoading, isError } = useGetAllNowPlayingMoviesQuery();
@@ -21,10 +21,11 @@ const NowPlayingMovie = () => {
         <div className={style.container}>
             {data?.results?.map((movie)=>(
                 <div className={style.movie} key={movie.id}>
+                    <img className={style.img} src={`${img}${movie.poster_path}`} alt={movie.overview} />
                 <p>{movie.title}</p>
                 <p>{movie.overview}</p>
                 <p>{movie.release_date}</p>
-                <p>{}</p>
+                
             </div>
         ))}
         </div>

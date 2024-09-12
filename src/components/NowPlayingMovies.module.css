@@ -4,13 +4,17 @@
 }
 
 .mainWrapper{
-    display: grid;
     width: 95vw;
 }
 
 .container{
     display: grid; 
-    width: 150vw;
-    display: flex;
+    width: 90vw;
+    margin: auto;
     justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.img{
+    width: 230px;
+    height: 300px;
 } 
