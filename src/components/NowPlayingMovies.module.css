@@ -1,0 +1,16 @@
+.movie{
+    width: 200px;
+    
+}
+
+.mainWrapper{
+    display: grid;
+    width: 95vw;
+}
+
+.container{
+    display: grid; 
+    width: 150vw;
+    display: flex;
+    justify-content: space-between;
+} 
